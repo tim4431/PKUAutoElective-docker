@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  pixivutil2:
+    image: tim44/pkuautoelective-docker
+    container_name: pkuautoelective
+    volumes:
+      - ~/Container/pkuautoelective-docker/config:/PKUAutoElective/config
+      - ~/Container/pkuautoelective-docker/logs:/PKUAutoElective/logs
+      - ~/Container/pkuautoelective-docker/keys:/PKUAutoElective/keys
+      - ~/Container/pkuautoelective-docker/pkuautoelective.sh:/PKUAutoElective/pkuautoelective.sh
+    network_mode: host

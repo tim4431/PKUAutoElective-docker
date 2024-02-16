@@ -1,0 +1,6 @@
+/logs/**
+/keys/apikey.json
+/keys/wechatkey.json
+/config/**
+!/config/overallconfig.sample.ini
+!/config/config.sample.ini
