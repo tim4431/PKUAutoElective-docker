@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  pixivutil2:
+  pkuautoelective:
     image: tim44/pkuautoelective-docker
     container_name: pkuautoelective
     volumes:

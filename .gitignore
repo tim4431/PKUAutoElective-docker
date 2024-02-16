@@ -2,6 +2,7 @@
 !/logs/sample.log
 /keys/apikey.json
 /keys/wechatkey.json
+/keys/mailkey.json
 /config/**
 !/config/overallconfig.sample.ini
 !/config/config.sample.ini

@@ -2,5 +2,6 @@
     "username": "admin",
     "password": "passwd",
     "RecognitionTypeid": "1003",
+    "RecognitionWeights": {"3":0.4, "1003":0.7, "7":1.0},
     "Timeout": "5"
 }

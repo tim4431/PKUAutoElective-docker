@@ -82,7 +82,7 @@ push_interval = 20    # notification each 20min
 {
     "username": "admin",
     "password": "passwd",
-    "RecognitionTypeid": "1003",
+    "RecognitionWeights": {"3":0.4, "1003":0.7, "7":1.0},
     "Timeout": "5"
 }
 ```
