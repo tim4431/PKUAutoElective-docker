@@ -44,12 +44,30 @@ Entrypoint: pkuautoelective.sh
 ```
 
 `config.ini`: 刷课机配置文件
+
 `overallconfig.ini`: 全局配置文件
 
 `apikey.json`: TT 识图 API
+
 `wechatkey.json`: 企业微信通知
 
 ## Running
 ```bash
 docker compose up -d
+```
+
+注意修改`docker-compose.yml`中挂载的文件夹路径
+``` yaml
+version: '3.8'
+
+services:
+  pixivutil2:
+    image: tim44/pkuautoelective-docker
+    container_name: pkuautoelective
+    volumes:
+      - ~/Container/pkuautoelective-docker/config:/PKUAutoElective/config
+      - ~/Container/pkuautoelective-docker/logs:/PKUAutoElective/logs
+      - ~/Container/pkuautoelective-docker/keys:/PKUAutoElective/keys
+      - ~/Container/pkuautoelective-docker/pkuautoelective.sh:/PKUAutoElective/pkuautoelective.sh
+    network_mode: host
 ```
