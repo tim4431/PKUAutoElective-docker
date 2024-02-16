@@ -24,6 +24,7 @@ Entrypoint: pkuautoelective.sh
 `chmod +x pkuautoelective.sh`
 
 ## Configuration
+```
 .
 ├── config
 │   ├── config.p1.ini (copied from config.sample.ini)
@@ -40,6 +41,7 @@ Entrypoint: pkuautoelective.sh
 │   └── p1.log
 ├── pkuautoelective.sh
 └── README.md
+```
 
 `config.ini`: 刷课机配置文件
 `overallconfig.ini`: 全局配置文件
