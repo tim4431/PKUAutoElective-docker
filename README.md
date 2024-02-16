@@ -1,8 +1,8 @@
 # PKUAutoElective-Docker
 
-PKUAutoElective 服务器部署
+PKUAutoElective 服务器容器部署
 
-Adapted from [PKUAutoElective](https://github.com/zhongxinghong/PKUAutoElective) and [PKUElective2021Spring](https://github.com/Mzhhh/PKUElective2021Spring)
+Adapted from [PKUAutoElective](https://github.com/zhongxinghong/PKUAutoElective) and [PKUElective2022Spring](https://github.com/Totoro-Li/PKUElective2022Spring)
 
 ## Build
 ```dockerfile
@@ -45,15 +45,12 @@ docker compose up
 .
 ├── config
 │   ├── config.p1.ini (copied from config.sample.ini)
-│   ├── config.sample.ini
 │   ├── overallconfig.ini (copied from overallconfig.sample.ini)
-│   └── overallconfig.sample.ini
 ├── docker-compose.yml
 ├── keys
 │   ├── apikey.json (copied from apikey.sample.json)
-│   ├── apikey.sample.json
-│   ├── wechatkey.json (copied from wechatkey.sample.json)
-│   └── wechatkey.sample.json
+│   ├── mailkey.json (copied from mailkey.sample.json)
+│   └── wechatkey.json (copied from wechatkey.sample.json)
 ├── logs
 │   └── p1.log
 ├── pkuautoelective.sh
@@ -62,11 +59,11 @@ docker compose up
 
 **刷课机配置文件: `config.p1.ini`**
 
-这里 `p1` 代表 page 1
+这里 `p1` 代表 page 1, 名称自定义, 可同时添加多个配置文件
 
-见 [PKUAutoElective](https://github.com/zhongxinghong/PKUAutoElective)
+具体定义方式见 [PKUAutoElective](https://github.com/zhongxinghong/PKUAutoElective)
 
-在 `config.p1.ini` 中添加下列配置
+在 `config.p1.ini` 中添加下列配置，用于配置提醒服务
 ```yaml
 [prompter]
 
