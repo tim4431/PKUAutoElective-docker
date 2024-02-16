@@ -71,3 +71,6 @@ services:
       - ~/Container/pkuautoelective-docker/pkuautoelective.sh:/PKUAutoElective/pkuautoelective.sh
     network_mode: host
 ```
+
+## Configuration
+modify `pkuautoelective.sh` to configure the behavior of the container
