@@ -37,7 +37,7 @@ chmod +x pkuautoelective.sh
 
 Pull and run the image
 ```bash
-docker compose up -d
+docker compose up
 ```
 
 ## Configuration
@@ -60,19 +60,29 @@ docker compose up -d
 └── README.md
 ```
 
-**刷课机配置文件: `config.ini`**
+**刷课机配置文件: `config.p1.ini`**
+
+这里 `p1` 代表 page 1
 
 见 [PKUAutoElective](https://github.com/zhongxinghong/PKUAutoElective)
 
+在 `config.p1.ini` 中添加下列配置
+```yaml
+[prompter]
+
+wechat_prompt = true # 是否开启企业微信推送
+mail_prompt = true   # 是否开启邮件推送
+sound_prompt = true  # 在个人电脑运行时，是否开启声音提醒
+```
 
 **全局配置文件: `overallconfig.ini`**
 
 ```yaml
 [config]
 is_first_stage = true # 是否是退补选第一阶段
-is_server = true      # 是否部署在服务器上
+is_server = true      # 是否部署在服务器上，如果是则不会开启声音提醒
 recognizer = tt       # TT 识图 api
-push_interval = 20    # notification each 20min
+push_interval = 20    # scheduled notification each 20min
 ```
 
 **TT 识图 API配置文件: `apikey.json`**
@@ -82,10 +92,23 @@ push_interval = 20    # notification each 20min
 {
     "username": "admin",
     "password": "passwd",
+    "RecognitionTypeid": "1003",
     "RecognitionWeights": {"3":0.4, "1003":0.7, "7":1.0},
     "Timeout": "5"
 }
 ```
+
+**qq邮箱通知: `mailkey.json`**
+```json
+{
+    "mail_host": "smtp.qq.com",
+    "mail_user": "xxxxxx@qq.com",
+    "mail_pass": "passwd",
+    "sender": "xxxxxx@qq.com",
+    "receivers": ["xxxxxx@qq.com"]
+}
+```
+其中 `mail_pass` 并不是邮箱登录密码而是 `smtp` 服务密钥
 
 **企业微信通知: `wechatkey.json`**
 

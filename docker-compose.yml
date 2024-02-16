@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   pkuautoelective:
-    image: tim44/pkuautoelective-docker
+    image: tim44/pkuautoelective-docker:latest
     container_name: pkuautoelective
     volumes:
       - ~/Container/PKUAutoElective-docker/config:/PKUAutoElective/config
