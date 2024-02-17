@@ -115,4 +115,18 @@ push_interval = 20    # scheduled notification each 20min
 
 
 ## Configuration
-modify `pkuautoelective.sh` to configure the behavior of the container
+
+修改 `pkuautoelective.sh` 来自定义docker运行方式
+```bash
+#!/bin/bash
+NOW=$(date +"%Y-%m-%d_%H-%M-%S")
+
+echo p1 start
+nohup python main.py -c ./PAE_private/config/config.p1.ini -m > ./logs/${NOW}_p1.log 2>&1 &
+
+tail -f ./logs/${NOW}_p1.log
+```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tim4431/PKUAutoElective-docker&type=Date)](https://star-history.com/#tim4431/PKUAutoElective-docker&Date)
