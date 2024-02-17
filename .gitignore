@@ -8,3 +8,4 @@
 !/config/config.sample.ini
 docker-compose.yml
 pkuautoelective.sh
+tonas.sh
