@@ -6,3 +6,4 @@
 /config/**
 !/config/overallconfig.sample.ini
 !/config/config.sample.ini
+docker-compose.yml
