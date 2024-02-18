@@ -5,8 +5,8 @@ services:
     image: tim44/pkuautoelective-docker:latest
     container_name: pkuautoelective
     volumes:
-      - ~/Container/PKUAutoElective-docker/config:/PKUAutoElective/config
+      - ~/Container/PKUAutoElective-docker/config:/PKUAutoElective/PAE_private/config
+      - ~/Container/PKUAutoElective-docker/keys:/PKUAutoElective/PAE_private/keys
       - ~/Container/PKUAutoElective-docker/logs:/PKUAutoElective/logs
-      - ~/Container/PKUAutoElective-docker/keys:/PKUAutoElective/keys
       - ~/Container/PKUAutoElective-docker/pkuautoelective.sh:/PKUAutoElective/pkuautoelective.sh
     network_mode: host
